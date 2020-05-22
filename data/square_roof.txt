@@ -54,7 +54,7 @@ PC-OUT 1: GID
   STRESS = 1
   PREC = 10
   SUPPORT_FORCE = 1
-  OUTPUT_FILE_NAME = Squar_Roof
+  OUTPUT_FILE_NAME = square_roof
 
 EL-PART 1
   NAME = Plate_in_bending
