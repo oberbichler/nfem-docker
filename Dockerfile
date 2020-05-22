@@ -17,7 +17,7 @@ COPY ./data ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 
-RUN pip3 install caratpost
+RUN pip3 install caratpost==0.4
 
 WORKDIR ${HOME}
 USER ${USER}
