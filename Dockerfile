@@ -9,6 +9,7 @@ RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
     ${NB_USER} \
+ && echo 'source /opt/conda/bin/activate' >> ${HOME}/.bashrc
  && echo 'export PS1="> "' >> ${HOME}/.bashrc
 
 ENV SHELL /bin/bash
