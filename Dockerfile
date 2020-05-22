@@ -5,7 +5,7 @@ ARG NB_UID
 ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
 
-RUN pip install git+https://github.com/oberbichler/caratpost \
+RUN pip install caratpost \
  && adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
