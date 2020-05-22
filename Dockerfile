@@ -6,7 +6,7 @@ ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
 
 RUN pip install plotly \
- && sudo apt-get install -y nodejs \
+ && apt-get install -y nodejs \
  && jupyter labextension install jupyterlab-plotly \
  && adduser --disabled-password \
     --gecos "Default user" \
