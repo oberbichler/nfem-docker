@@ -5,8 +5,7 @@ ARG NB_UID
 ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
 
-RUN pip install caratpost \
- && adduser --disabled-password \
+RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
     ${NB_USER} \
@@ -17,6 +16,8 @@ ENV SHELL /bin/bash
 COPY ./data ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
+
+RUN pip install caratpost
 
 WORKDIR ${HOME}
 USER ${USER}
