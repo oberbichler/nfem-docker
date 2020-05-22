@@ -6,6 +6,7 @@ ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
 
 RUN pip install plotly \
+ && apt-get -y update \
  && apt-get install -y nodejs \
  && jupyter labextension install jupyterlab-plotly \
  && adduser --disabled-password \
