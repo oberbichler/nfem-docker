@@ -1,4 +1,4 @@
-FROM oberbichler/carat:2020-05-22
+FROM oberbichler/carat:2020-05-22-2
 
 ARG NB_USER
 ARG NB_UID
@@ -17,7 +17,7 @@ COPY ./data ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 
-RUN pip install caratpost
+RUN pip3 install caratpost
 
 WORKDIR ${HOME}
 USER ${USER}
