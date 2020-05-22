@@ -1,15 +1,11 @@
-FROM oberbichler/carat:2020-05-12
+FROM oberbichler/carat:2020-05-22
 
 ARG NB_USER
 ARG NB_UID
 ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
 
-RUN pip install plotly \
- && apt-get -y update \
- && apt-get install -y nodejs \
- && jupyter labextension install jupyterlab-plotly \
- && adduser --disabled-password \
+RUN adduser --disabled-password \
     --gecos "Default user" \
     --uid ${NB_UID} \
     ${NB_USER} \
